@@ -1,3 +1,35 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'Open Sans';
+    src: font('OpenSans-Regular.woff2') format('woff2'),
+        font('OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: font('OpenSans-Bold.woff2') format('woff2'),
+        font('OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Code';
+    src: font('FiraCode-Bold.woff2') format('woff2'),
+        font('FiraCode-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Code';
+    src: font('FiraCode-Medium.woff2') format('woff2'),
+        font('FiraCode-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
