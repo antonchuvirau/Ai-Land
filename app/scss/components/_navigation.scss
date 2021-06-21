@@ -1,0 +1,26 @@
+.navigation {
+    &__list {
+        @include flex(row, center);
+        &_end {
+            justify-content: flex-end;
+        }
+        &-item {
+            &:not(:last-child) {
+                margin-right: 90px;
+            }
+        }
+        &-link {
+            font-family: $secondary-font;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: $white;
+            text-decoration: none;
+            &:hover {
+                color: $secondary;
+            }
+            &:active {
+                color: $secondary-100;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.button {
+    display: inline-block;
+    font-family: $secondary-font;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $white;
+    text-decoration: none;
+    background: $primary;
+    border-radius: 4px;
+    line-height: 1.5;
+    padding: .94em 2.8em;
+    border: 2px solid $primary;
+    cursor: pointer;
+    &:hover {
+        background: transparent;
+        color: $primary;
+    }
+    &:active {
+        background: darken($primary, 5%);
+        color: $white;
+    }
+}

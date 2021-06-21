@@ -39,9 +39,9 @@ html {
   .container, .container-sm, .container-md, .container-lg {
     max-width: 960px; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px; } }
+    max-width: 1280px; } }
 
 .row {
   display: -webkit-box;
@@ -869,7 +869,7 @@ html {
   .offset-lg-11 {
     margin-left: 91.66667%; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   .col-xl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1161,7 +1161,7 @@ html {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   .d-xl-none {
     display: none !important; }
   .d-xl-inline {
@@ -1737,7 +1737,7 @@ html {
     -ms-flex-item-align: stretch !important;
         align-self: stretch !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   .flex-xl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -2965,7 +2965,7 @@ html {
   .mx-lg-auto {
     margin-left: auto !important; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1310px) {
   .m-xl-0 {
     margin: 0 !important; }
   .mt-xl-0,
@@ -3553,12 +3553,12 @@ html {
 
 b,
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #222;
+  color: #263238;
   font-size: 1.6rem;
   height: 100%;
   background: #fff; }
@@ -3578,7 +3578,7 @@ button, select, input, textarea {
   -webkit-box-shadow: none;
           box-shadow: none;
   border-radius: 0;
-  color: #222; }
+  color: #263238; }
 
 input {
   cursor: text;
@@ -3626,21 +3626,21 @@ table {
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Fira Code';
   src: url("../fonts/FiraCode-Bold.woff2") format("woff2"), url("../fonts/FiraCode-Bold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 
@@ -3654,3 +3654,114 @@ table {
 /**
  * Basic typography style for copy text
  */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+.header_sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+.header__wrapper {
+  padding: 30px 0; }
+
+.header__logo {
+  display: block; }
+
+.hero {
+  position: relative; }
+  .hero__wrapper {
+    position: relative;
+    padding: 185px 0;
+    padding-bottom: 120px;
+    z-index: 1; }
+  .hero__layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #191A1D url("../img/illustration.svg") no-repeat 50%/100% auto;
+    pointer-events: none; }
+  .hero__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 5.2rem;
+    color: #fff; }
+  .hero__desc {
+    margin-top: 30px; }
+    .hero__desc p {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.85;
+      color: #fff;
+      max-width: 455px; }
+      .hero__desc p:not(:last-child) {
+        margin-bottom: 20px; }
+  .hero__button {
+    margin-top: 30px; }
+  .hero__media {
+    position: relative;
+    left: 5%;
+    max-width: 430px; }
+    .hero__media:last-child {
+      left: 30%; }
+    .hero__media:not(:last-child) {
+      margin-bottom: 25px; }
+
+.button {
+  display: inline-block;
+  font-family: "Fira Code", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #2C0BF1;
+  border-radius: 4px;
+  line-height: 1.5;
+  padding: .94em 2.8em;
+  border: 2px solid #2C0BF1;
+  cursor: pointer; }
+  .button:hover {
+    background: transparent;
+    color: #2C0BF1; }
+  .button:active {
+    background: #280ad9;
+    color: #fff; }
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap; }
+  .navigation__list_end {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .navigation__list-item:not(:last-child) {
+    margin-right: 90px; }
+  .navigation__list-link {
+    font-family: "Fira Code", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none; }
+    .navigation__list-link:hover {
+      color: #F3BF53; }
+    .navigation__list-link:active {
+      color: #AB7C19; }

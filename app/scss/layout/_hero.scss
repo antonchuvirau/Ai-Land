@@ -1,0 +1,51 @@
+.hero {
+    position: relative;
+    &__wrapper {
+        position: relative;
+        padding: 185px 0;
+        padding-bottom: 120px;
+        z-index: 1;
+    }
+    &__layer {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $black-100 image('illustration.svg') no-repeat 50% / 100% auto;
+        pointer-events: none;
+    }
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 5.2rem;
+        color: $white;
+    }
+    &__desc {
+        margin-top: 30px;
+        & p {
+            margin: 0;
+            font-size: 1.4rem;
+            line-height: 1.85;
+            color: $white;
+            max-width: 455px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__button {
+        margin-top: 30px;
+    }
+    &__media {
+        position: relative;
+        left: 5%;
+        max-width: 430px;
+        &:last-child {
+            left: 30%;
+        }
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
