@@ -1,6 +1,9 @@
 .navigation {
     &__list {
         @include flex(row, center);
+        &_center {
+            justify-content: center;
+        }
         &_end {
             justify-content: flex-end;
         }

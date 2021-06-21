@@ -1,0 +1,59 @@
+.footer {
+    background: $black-100;
+    &__top {
+        padding: 25px 0;
+        padding-top: 70px;
+        &-col {
+            @include flex(column, center, flex-start);
+            &-icon {
+                max-width: 32px;
+                max-height: 32px;
+                margin-bottom: 20px;
+            }
+            &-name {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $white;
+            }
+            &-value {
+                font-family: $secondary-font;
+                margin-top: 15px;
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: $black-100;
+                font-weight: 500;
+                line-height: 1.5;
+                padding: .5em 1.25em;
+                background: $secondary;
+                border: 1px solid $secondary;
+                &:hover {
+                    background: transparent;
+                    color: $white;
+                }
+                &:active {
+                    background: $secondary-100;
+                    border-color: $secondary-100;
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding: 35px 0;
+        border-top: 1px solid rgba($white, .5);
+    }
+    &__copyright {
+        display: block;
+        text-align: right;
+        font-size: 1.2rem;
+        color: $white;
+        line-height: 1.55;
+    }
+    &__note {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+        color: $white;
+        line-height: 1.55;
+        margin-top: 70px;
+    }
+}

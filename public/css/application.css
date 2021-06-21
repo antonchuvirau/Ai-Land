@@ -3672,8 +3672,72 @@ table {
 .header__logo {
   display: block; }
 
+.footer {
+  background: #191A1D; }
+  .footer__top {
+    padding: 25px 0;
+    padding-top: 70px; }
+    .footer__top-col {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -ms-flex-wrap: no-wrap;
+          flex-wrap: no-wrap; }
+      .footer__top-col-icon {
+        max-width: 32px;
+        max-height: 32px;
+        margin-bottom: 20px; }
+      .footer__top-col-name {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #fff; }
+      .footer__top-col-value {
+        font-family: "Fira Code", sans-serif;
+        margin-top: 15px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #191A1D;
+        font-weight: 500;
+        line-height: 1.5;
+        padding: .5em 1.25em;
+        background: #F3BF53;
+        border: 1px solid #F3BF53; }
+        .footer__top-col-value:hover {
+          background: transparent;
+          color: #fff; }
+        .footer__top-col-value:active {
+          background: #AB7C19;
+          border-color: #AB7C19; }
+  .footer__bottom {
+    padding: 35px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); }
+  .footer__copyright {
+    display: block;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.55; }
+  .footer__note {
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.55;
+    margin-top: 70px; }
+
 .hero {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .hero__wrapper {
     position: relative;
     padding: 185px 0;
@@ -3730,7 +3794,7 @@ table {
     background: transparent;
     color: #2C0BF1; }
   .button:active {
-    background: #280ad9;
+    background: #260EB2;
     color: #fff; }
 
 .navigation__list {
@@ -3749,6 +3813,10 @@ table {
           align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap; }
+  .navigation__list_center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .navigation__list_end {
     -webkit-box-pack: end;
         -ms-flex-pack: end;

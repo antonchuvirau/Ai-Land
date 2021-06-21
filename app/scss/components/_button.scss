@@ -16,7 +16,7 @@
         color: $primary;
     }
     &:active {
-        background: darken($primary, 5%);
+        background: $primary-100;
         color: $white;
     }
 }

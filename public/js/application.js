@@ -1,6 +1,7 @@
 
 'use strict';
 
+const heroElement = document.querySelector(`.hero`);
 const heroLayerElement = document.querySelector(`.hero__layer`);
 const headerElement = document.querySelector(`.header`);
 const friction = 1 / 30;
@@ -18,7 +19,7 @@ function moveBackground() {
   window.requestAnimationFrame(moveBackground);
 }
 
-function onWindowEventHandler(evt) {
+function onHeroElementEventHandler(evt) {
     const lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - evt.clientX));
     const lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - evt.clientY));
     lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
@@ -34,7 +35,7 @@ function onWindowScrollHandler() {
     }
 }
 
-window.addEventListener(`mousemove`, onWindowEventHandler);
+heroElement.addEventListener(`mousemove`, onHeroElementEventHandler);
 window.addEventListener(`scroll`, onWindowScrollHandler);
 document.addEventListener(`DOMContentLoaded`, () => {
     moveBackground();
