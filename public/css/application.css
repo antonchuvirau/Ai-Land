@@ -3753,8 +3753,24 @@ table {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-  .navigation__list-item:not(:last-child) {
-    margin-right: 90px; }
+  .navigation__list-item {
+    position: relative; }
+    .navigation__list-item::after {
+      content: '/';
+      position: absolute;
+      left: calc(100% + 45px);
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2C0BF1;
+      line-height: 1.5; }
+    .navigation__list-item:last-child::after {
+      content: none; }
+    .navigation__list-item:not(:last-child) {
+      margin-right: 90px; }
   .navigation__list-link {
     font-family: "Fira Code", sans-serif;
     font-size: 1.4rem;

@@ -5,6 +5,23 @@
             justify-content: flex-end;
         }
         &-item {
+            position: relative;
+            &::after {
+                content: '/';
+                position: absolute;
+                left: calc(100% + 45px);
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: $primary;
+                line-height: 1.5;
+            }
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+            }
             &:not(:last-child) {
                 margin-right: 90px;
             }
