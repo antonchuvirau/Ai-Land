@@ -23,13 +23,26 @@
         color: $white;
     }
     &__desc {
+        position: relative;
         margin-top: 30px;
+        &::before {
+            content: '/';
+            position: absolute;
+            font-size: 4rem;
+            font-weight: 600;
+            color: $primary;
+            left: 0;
+            top: -20px;
+        }
         & p {
             margin: 0;
             font-size: 1.4rem;
             line-height: 1.85;
             color: $white;
             max-width: 455px;
+            &:first-child {
+                text-indent: 30px;
+            }
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
@@ -47,6 +60,57 @@
         }
         &:not(:last-child) {
             margin-bottom: 25px;
+        }
+    }
+}
+
+// MEDIA
+@media screen and (min-width: 991px) and (max-width: 1309px) {
+    .hero {
+        &__media {
+            max-width: 315px;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    .hero {
+        &__wrapper {
+            padding: 120px 0;
+            padding-bottom: 70px;
+            &-col {
+                &:not(:last-child) {
+                    margin-bottom: 85px;
+                }
+            }
+        }
+        &__title {
+            font-size: 4rem;
+        }
+        &__layer {
+            background-size: cover;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .hero {
+        &__media {
+            max-width: 250px;
+            left: 0;
+            &:last-child {
+                left: 15%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .hero {
+        &__media {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+        &__title {
+            font-size: 3.2rem;
         }
     }
 }

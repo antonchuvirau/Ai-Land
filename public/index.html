@@ -24,12 +24,19 @@
         <div class="header__wrapper">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-3">
+                    <div class="col-6 col-lg-3">
                         <a href="#" class="logo header__logo">
                             <img class="logo__value" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="alt">
                         </a>
                     </div>
-                    <div class="col-9">
+                    <div class="col-6 d-lg-none">
+                        <div class="header__mobile-option">
+                            <button type="button" class="header__mobile-button">
+                                <svg class="header__mobile-button-icon" width="34" height="25" fill="none" viewBox="0 0 34 25"><defs/><path fill="#2C0BF1" d="M2 0h32l-2 3H0l2-3zM2 11h32l-2 3H0l2-3zM2 22h32l-2 3H0l2-3z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-9">
                         <nav class="navigation header__navigation">
                             <ul class="list navigation__list navigation__list_end">
                                 <li class="navigation__list-item">
@@ -58,14 +65,14 @@
             <div class="hero__wrapper">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-6 hero__wrapper-col">
+                        <div class="col-12 col-lg-6 hero__wrapper-col">
                             <h1 class="hero__title">AI for TEXT</h1>
                             <div class="hero__desc">
                                 <p>Leverage NLP and NLU to process documents, news, comments, tweets, and extract actionable signals from them. Rank and cluster them for optimized search and discovery.</p>
                             </div>
                             <a class="button hero__button" href="#">Learn more</a>
                         </div>
-                        <div class="col-6 hero__wrapper-col">
+                        <div class="col-12 col-lg-6 hero__wrapper-col">
                             <img class="hero__media" src="img/ner@.png" srcset="img/ner.png 1x, img/ner@2x.png 2x" alt="alt">
                             <img class="hero__media" src="img/sentiment-analysis.png" srcset="img/sentiment-analysis.png 1x, img/sentiment-analysis@2x.png 2x" alt="alt">
                         </div>
@@ -77,7 +84,7 @@
         <section class="section partners-section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-10">
+                    <div class="col-12 col-lg-10">
                         <span class="section__note section__note_align-center partners-section__note">&#60;partners&#62;</span>
                         <h2 class="section__title section__title_align-center partners-section__title">Technologies and Tools</h2>
                         <div class="section__grid partners-section__grid">

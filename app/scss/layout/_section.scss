@@ -95,3 +95,23 @@
         }
     }
 }
+
+// MEDIA
+@media screen and (max-width: 991px) {
+    .section {
+        padding: 90px 0;
+        &__title {
+            font-size: 4rem;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .section {
+        &__note {
+            font-size: 1.4rem;
+        }
+        &__title {
+            font-size: 3.2rem;
+        }
+    }
+}

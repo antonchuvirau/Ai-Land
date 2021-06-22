@@ -15,4 +15,27 @@
     &__logo {
         display: block;
     }
+    &__mobile {
+        &-option {
+            @include flex(row, center, flex-end);
+        }
+        &-button {
+            @include flex(row, center, flex-end);
+            width: 34px;
+            height: 25px;
+            &-icon {
+                flex-shrink: 0;
+            }
+        }
+    }
 }
+
+// MEDIA
+@media screen and (max-width: 991px) {
+    .header {
+        &__wrapper {
+            padding: 20px 0;
+        }
+    }
+}
+@media screen and (max-width: 575px) {}
