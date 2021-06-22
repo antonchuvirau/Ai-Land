@@ -56,9 +56,12 @@ select {
     @extend button;
 }
 input {
+    font-size: 1.6rem;
+    color: $white;
+    font-family: $secondary-font;
     @extend button;
     cursor: text;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 textarea {
     @extend button;
@@ -76,17 +79,29 @@ table {
 }
 ::-webkit-input-placeholder {
     font-size: 1.6rem;
+    color: $white;
+    font-family: $secondary-font;
+    font-weight: 600;
 }
 ::-moz-placeholder {
     font-size: 1.6rem;
+    color: $white;
+    font-family: $secondary-font;
+    font-weight: 600;
     opacity: 1;
 }
 :-moz-placeholder {
     font-size: 1.6rem;
+    color: $white;
+    font-family: $secondary-font;
+    font-weight: 600;
     opacity: 1;
 }
 :-ms-input-placeholder {
     font-size: 1.6rem;
+    color: $white;
+    font-family: $secondary-font;
+    font-weight: 600;
 }
 :focus::-webkit-input-placeholder {
     color: transparent;

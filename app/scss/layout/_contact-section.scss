@@ -1,0 +1,12 @@
+.contact-section {
+    background: $primary image('contact-section-illustration.svg') no-repeat 50% / contain;
+    padding: 70px 0;
+    overflow: hidden;
+    &__title {
+        color: $secondary;
+        margin-bottom: 30px;
+    }
+    &__note {
+        color: $white;
+    }
+}

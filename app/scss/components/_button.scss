@@ -19,4 +19,26 @@
         background: $primary-100;
         color: $white;
     }
+    &_align {
+        &-center {
+            display: block;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &_light {
+        background: $secondary;
+        border-color: $secondary;
+        color: $black-100;
+        &:hover {
+            background: transparent;
+            color: $white;
+        }
+        &:active {
+            background: $secondary-200;
+            border-color: $secondary-200;
+            color: $black-100;
+        }
+    }
 }
