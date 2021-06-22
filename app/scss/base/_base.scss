@@ -31,7 +31,7 @@ b, strong {
 body {
     @include font();
     font-weight: 400;
-    color: $black;
+    color: $black-100;
     font-size: 1.6rem;
     height: 100%;
     background: $white;
