@@ -1,0 +1,21 @@
+.partners-section {
+    background: $primary image('contact-section-illustration.svg') no-repeat 50% / 100% auto;
+    padding: 90px 0;
+    &__title {
+        color: $secondary;
+        margin-bottom: 30px;
+    }
+    &__note {
+        color: $white;
+    }
+    &__grid {
+        @include flex(row, center, center);
+    }
+    &__media {
+        max-height: 60px;
+        max-width: 200px;
+        &:not(:last-child) {
+            margin-right: 35px;
+        }
+    }
+}

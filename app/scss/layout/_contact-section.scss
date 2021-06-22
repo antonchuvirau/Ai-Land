@@ -1,5 +1,5 @@
 .contact-section {
-    background: $primary image('contact-section-illustration.svg') no-repeat 50% / contain;
+    background: $primary image('contact-section-illustration.svg') no-repeat 50% / 100% auto;
     padding: 70px 0;
     overflow: hidden;
     &__title {

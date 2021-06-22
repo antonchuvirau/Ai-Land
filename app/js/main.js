@@ -3,7 +3,7 @@
 const heroElement = document.querySelector(`.hero`);
 const heroLayerElement = document.querySelector(`.hero__layer`);
 const headerElement = document.querySelector(`.header`);
-const friction = 1 / 30;
+const friction = 1 / 15;
 let lFollowX = 0;
 let lFollowY = 0;
 let x = 0, y = 0;

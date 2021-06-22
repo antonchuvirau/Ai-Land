@@ -1,0 +1,10 @@
+.advantages-section {
+    background: image('lines.svg') no-repeat 50% / 85% auto;
+    overflow: hidden;
+    &__item {
+        padding: 0;
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+    }
+}
