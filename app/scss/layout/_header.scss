@@ -20,11 +20,41 @@
             @include flex(row, center, flex-end);
         }
         &-button {
-            @include flex(row, center, flex-end);
+            position: relative;
+            @include flex(row, center);
             width: 34px;
             height: 25px;
+            overflow: hidden;
             &-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
                 flex-shrink: 0;
+                pointer-events: none;
+                transition: transform .45s ease, opacity .45s ease;
+                &:last-child {
+                    opacity: 0;
+                    transform: translate3d(-50%, 100%, 0);
+                }
+            }
+            &_active {
+                & .header {
+                    &__mobile {
+                        &-button {
+                            &-icon {
+                                &:first-child {
+                                    opacity: 0;
+                                    transform: translate3d(-50%, -100%, 0);
+                                 }
+                                 &:last-child {
+                                     opacity: 1;
+                                     transform: translate3d(-50%, -50%, 0);
+                                 }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -36,6 +66,22 @@
         &__wrapper {
             padding: 20px 0;
         }
+        &__navigation {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            transform: translate3d(200%, 0, 0);
+            pointer-events: none;
+            transition: transform .65s ease;
+            background: $black-100;
+            padding: 30px 15px;
+            z-index: 9999;
+            &_opened {
+                transform: none;
+                pointer-events: auto;
+            }
+        }
     }
 }
-@media screen and (max-width: 575px) {}

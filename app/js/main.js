@@ -4,6 +4,9 @@ const heroElement = document.querySelector(`.hero`);
 const heroLayerElement = document.querySelector(`.hero__layer`);
 const headerElement = document.querySelector(`.header`);
 const anchorLinks = document.querySelectorAll(`a[href*="#"]`);
+const openMenuButton = document.querySelector(`.header__mobile-button`);
+const headerNavigationElement = document.querySelector(`.header__navigation`);
+const navigationLinksCollection = document.querySelectorAll(`.navigation__list-link`);
 const friction = 1 / 15;
 let lFollowX = 0;
 let lFollowY = 0;
@@ -46,6 +49,28 @@ function anchorLinkOnClickHandler(evt) {
     });
 }
 
+function onOpenMenuButtonClickHandler() {
+    document.documentElement.classList.toggle(`is-locked`);
+    headerNavigationElement.classList.toggle(`header__navigation_opened`);
+    openMenuButton.classList.toggle(`header__mobile-button_active`);
+}
+
+function onNavigationLinkClickHandler(evt) {
+    evt.preventDefault();
+    if (document.documentElement.classList.contains(`is-locked`)) {
+        document.documentElement.classList.remove(`is-locked`);
+        headerNavigationElement.classList.toggle(`header__navigation_opened`);
+        openMenuButton.classList.toggle(`header__mobile-button_active`);
+    }
+    const href = this.getAttribute(`href`);
+    const offsetTop = document.querySelector(href).offsetTop;
+    
+    window.scroll({
+        top: offsetTop,
+        behavior: `smooth`
+    });
+}
+
 heroElement.addEventListener(`mousemove`, onHeroElementEventHandler);
 window.addEventListener(`scroll`, onWindowScrollHandler);
 document.addEventListener(`DOMContentLoaded`, () => {
@@ -53,6 +78,14 @@ document.addEventListener(`DOMContentLoaded`, () => {
     if (anchorLinks.length) {
         for (const anchorLink of anchorLinks) {
             anchorLink.addEventListener(`click`, anchorLinkOnClickHandler);
+        }
+    }
+    if (openMenuButton) {
+        openMenuButton.addEventListener(`click`, onOpenMenuButtonClickHandler);
+    }
+    if (navigationLinksCollection.length) {
+        for (const navigationLink of navigationLinksCollection) {
+            navigationLink.addEventListener(`click`, onNavigationLinkClickHandler);
         }
     }
 });

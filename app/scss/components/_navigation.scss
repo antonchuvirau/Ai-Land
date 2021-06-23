@@ -63,3 +63,26 @@
         }
     }
 }
+@media screen and (max-width: 991px) {
+    .navigation {
+        &__list {
+            flex-direction: column;
+            &-item {
+                &:nth-child(n) {
+                    margin-right: 0;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 65px;
+                }
+                &::after {
+                    left: 50%;
+                    top: calc(100% + 23px);
+                    transform: translate3d(-50%, 0, 0);
+                }
+            }
+            &-link {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
