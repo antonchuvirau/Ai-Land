@@ -8,3 +8,32 @@
         }
     }
 }
+
+// MEDIA
+@media screen and (max-width: 991px) {
+    .advantages-section {
+        background-size: auto 100%;
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 52.5px;
+            }
+            &-col {
+                margin-top: 12.5px;
+                margin-bottom: 12.5px;
+            }
+            // &:nth-child(even) {
+            //     & .section {
+            //         &__note {
+            //             text-align: right;
+            //         }
+            //         &__title {
+            //             text-align: right;
+            //         }
+            //         &__content {
+            //             text-align: right;
+            //         }
+            //     }
+            // }
+        }
+    }
+}

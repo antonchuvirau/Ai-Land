@@ -1,0 +1,15 @@
+.why-section {
+    background: image('lines.svg') no-repeat 50% / 85% auto;
+    overflow: hidden;
+}
+
+// MEDIA
+@media screen and (max-width: 991px) {
+    .why-section {
+        &__col {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

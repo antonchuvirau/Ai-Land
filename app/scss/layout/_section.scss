@@ -103,6 +103,14 @@
         &__title {
             font-size: 4rem;
         }
+        &__content {
+            padding: 0;
+            &_pl {
+                &-custom {
+                    padding-left: 0;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 575px) {
@@ -111,7 +119,20 @@
             font-size: 1.4rem;
         }
         &__title {
-            font-size: 3.2rem;
+            font-size: 3rem;
         }
+        &__media {
+            height: 57vw;
+            &-value {
+                max-height: 180px;
+            }
+        }
+        // &__text {
+        //     max-width: none;
+        //     @include flex();
+        //     & p {
+        //         max-width: 450px;
+        //     }
+        // }
     }
 }

@@ -24,3 +24,26 @@
         margin-top: 30px;
     }
 }
+
+// MEDIA
+@media screen and (max-width: 991px) {
+    .form {
+        &__row {
+            flex-direction: column;
+        }
+        &__field {
+            width: 100%;
+            &_width {
+                &-50 {
+                    width: 100%;
+                }
+            }
+            &:nth-child(n) {
+                margin: 0;
+            }
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -94,7 +94,7 @@
 @media screen and (max-width: 767px) {
     .hero {
         &__media {
-            max-width: 250px;
+            max-width: 350px;
             left: 0;
             &:last-child {
                 left: 15%;
@@ -105,6 +105,7 @@
 @media screen and (max-width: 575px) {
     .hero {
         &__media {
+            max-width: 250px;
             &:not(:last-child) {
                 margin-bottom: 15px;
             }

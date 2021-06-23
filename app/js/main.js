@@ -3,6 +3,7 @@
 const heroElement = document.querySelector(`.hero`);
 const heroLayerElement = document.querySelector(`.hero__layer`);
 const headerElement = document.querySelector(`.header`);
+const anchorLinks = document.querySelectorAll(`a[href*="#"]`);
 const friction = 1 / 15;
 let lFollowX = 0;
 let lFollowY = 0;
@@ -34,8 +35,24 @@ function onWindowScrollHandler() {
     }
 }
 
+function anchorLinkOnClickHandler(evt) {
+    evt.preventDefault();
+    const href = this.getAttribute(`href`);
+    const offsetTop = document.querySelector(href).offsetTop;
+    
+    window.scroll({
+        top: offsetTop,
+        behavior: `smooth`
+    });
+}
+
 heroElement.addEventListener(`mousemove`, onHeroElementEventHandler);
 window.addEventListener(`scroll`, onWindowScrollHandler);
 document.addEventListener(`DOMContentLoaded`, () => {
     moveBackground();
+    if (anchorLinks.length) {
+        for (const anchorLink of anchorLinks) {
+            anchorLink.addEventListener(`click`, anchorLinkOnClickHandler);
+        }
+    }
 });
