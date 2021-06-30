@@ -3810,11 +3810,11 @@ table {
         font-family: "Fira Code", sans-serif;
         margin-top: 15px;
         text-decoration: none;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         color: #191A1D;
         font-weight: 500;
         line-height: 1.5;
-        padding: .5em 1.25em;
+        padding: .5em .85em;
         background: #F3BF53;
         border: 1px solid #F3BF53; }
         .footer__top-col-value:hover {
@@ -4068,40 +4068,66 @@ table {
 @media screen and (max-width: 991px) {
   .contact-section {
     background-size: cover;
-    padding: 50px 0; } }
+    padding: 50px 0;
+    padding-bottom: 70px; } }
 
-.form__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap; }
-
-.form__field {
-  width: 100%; }
-  .form__field_width-50 {
-    width: calc((100% - 25px) / 2); }
-  .form__field-input {
+.form {
+  position: relative; }
+  .form__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: no-wrap;
+        flex-wrap: no-wrap; }
+  .form__field {
+    width: 100%; }
+    .form__field_width-50 {
+      width: calc((100% - 25px) / 2); }
+    .form__field-input {
+      width: 100%;
+      height: 65px;
+      border: 3px solid #F4C03B;
+      background: rgba(255, 255, 255, 0.1); }
+      .form__field-input.wpcf7-not-valid {
+        border-color: red; }
+    .form__field:not(:last-child) {
+      margin-right: 25px; }
+    .form__field .wpcf7-not-valid-tip {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      font-size: 1.2rem;
+      color: red; }
+    .form__field .wpcf7-form-control-wrap {
+      display: block; }
+  .form__button {
+    max-width: 190px;
+    margin-top: 30px; }
+  .form .wpcf7-response-output {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
     width: 100%;
-    height: 65px;
-    border: 3px solid #F4C03B;
-    background: rgba(255, 255, 255, 0.1); }
-  .form__field:not(:last-child) {
-    margin-right: 25px; }
-
-.form__button {
-  max-width: 190px;
-  margin-top: 30px; }
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #fff !important;
+    font-size: 1.5rem !important; }
+  .form .ajax-loader {
+    display: none; }
+  .form.submitting {
+    opacity: .5;
+    pointer-events: none; }
 
 @media screen and (max-width: 991px) {
   .form__row {
@@ -4116,7 +4142,12 @@ table {
     .form__field:nth-child(n) {
       margin: 0; }
     .form__field:not(:last-child) {
-      margin-bottom: 15px; } }
+      margin-bottom: 20px; }
+    .form__field .wpcf7-not-valid-tip {
+      font-size: 1.1rem;
+      top: calc(100% + 3px); }
+  .form .wpcf7-response-output {
+    font-size: 1.4rem !important; } }
 
 .advantages-section {
   background: url("../img/lines.svg") no-repeat 50%/85% auto;
