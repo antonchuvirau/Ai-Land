@@ -3675,11 +3675,16 @@ table {
   list-style-type: none; }
 
 .header_sticky {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999; }
+
+.header_is-scrolled {
+  background: rgba(246, 246, 246, 0.96);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(38, 50, 56, 0.1);
+          box-shadow: 0 3px 5px 0 rgba(38, 50, 56, 0.1); }
 
 .header__wrapper {
   padding: 30px 0; }
